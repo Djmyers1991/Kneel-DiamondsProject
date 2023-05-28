@@ -18,8 +18,8 @@ const transientState = {
     "metalsId":0,
     "totalPrice": 0
 
-}//here we are changing all the
-
+}//here we are changing all the temporary states of the relative foreignkeys
+//this makes sense to me that the temporary state will be replaced via the functions below
 // Functions to modify each property of transient state
 
 export const setStylesId = (selectedStylesId) => {
@@ -30,6 +30,7 @@ console.log(transientState)
 //The parameter is selectedStylesId. I'm setting the object property
 //of transientStatestylesId to whatever is clicked or selected.
 // Function to convert transient state to permanent state
+//whatever is selected in the various functions will be imported to the state above.
 
 export const setSizesId = (selectedSizeId) => {
 transientState.sizesId = selectedSizeId
@@ -50,13 +51,13 @@ export const setMetalsId = (selectedMetalId) => {
             method: "POST",//means create
             headers: {
                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify(transientState)
+            }, //not sure what all this means if I'm being honest. Ask Steve/Tiana during self-assessment.
+            body: JSON.stringify(transientState)//we need to turn our transient state into a string so we can access it
         }
 
         const response = await fetch("http://localhost:8088/orders", postOptions)
         const customEvent = new CustomEvent("newSubmission")
-document.dispatchEvent(customEvent)
+document.dispatchEvent(customEvent) //not sure what these are doing. Ask Steve/Tiana during self-assessment to explain.
 
     }
 

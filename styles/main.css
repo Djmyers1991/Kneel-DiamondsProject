@@ -1,3 +1,24 @@
 .choices {
-display:flex;
+display: flex;
+flex-flow: row-rap;
+justify-content: align-right  ;
+padding-top: 10px;
+padding-right: 20px;
+padding-bottom: 10px;
+padding-left: 20px;
+
+}
+.boxchoices {
+    border: 1px dashed blue;
+    border-width: 1px;
+    width: 200px;
+    padding: 20px;
+    margin: 50px;
+    height: 200px
+
+}
+
+button {
+    background: red;
+    color: white;
 }

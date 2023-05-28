@@ -71,26 +71,9 @@
     }
   ],
   "orders": [
-    {
-      "stylesId": 1,
-      "sizesId": 2,
-      "metalsId": 1,
-      "totalPrice": 0,
-      "id": 1
-    },
-    {
-      "stylesId": 3,
-      "sizesId": 5,
-      "metalsId": 5,
-      "totalPrice": 0,
-      "id": 2
-    },
-    {
-      "stylesId": 1,
-      "sizesId": 3,
-      "metalsId": 1,
-      "totalPrice": 0,
-      "id": 3
-    }
+    
+
+    
+   
   ]
 }

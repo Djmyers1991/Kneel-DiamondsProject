@@ -5,8 +5,8 @@ import { StyleOptions } from './Styles.js'
 
 const container = document.querySelector("#container")
 
-const render = async () => {
-    const metalOptionsHTML = await MetalOptions()
+const render = async () => {//don't forget the async. It must wait for the function to run//
+    const metalOptionsHTML = await MetalOptions()//when running the functions from an api, you must include await
     const styleOptionsHTML = await StyleOptions()
     const sizeOptionsHTML = await SizeOptions()
     const placeOrderButton= await orderButton()
@@ -26,7 +26,7 @@ const render = async () => {
 
             </section>
 
-            <section class="choices__styles options">
+            <section class="choices__styles options" class="boxchoices">
                 <h2>Styles</h2>
                 ${styleOptionsHTML}
             </section>
@@ -44,8 +44,10 @@ const render = async () => {
 
     container.innerHTML = composedHTML
 }
+
 document.addEventListener("newSubmission", type => {
     console.log("State of data has changed. Regenerating HTML...")
     render()
-})
-render()
+}) //ask Steve why different from Indiana Jeans and what this means. 
+//this portion shows the state of the data has changed  when you click the create custom button// 
+render() //call the function outside as well!
